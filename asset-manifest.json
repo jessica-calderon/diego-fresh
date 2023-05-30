@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/diego-fresh/static/css/main.9ab8ff0d.css",
-    "main.js": "/diego-fresh/static/js/main.cfa11405.js",
+    "main.js": "/diego-fresh/static/js/main.ed45734b.js",
     "static/js/787.951b8dbb.chunk.js": "/diego-fresh/static/js/787.951b8dbb.chunk.js",
     "index.html": "/diego-fresh/index.html",
     "main.9ab8ff0d.css.map": "/diego-fresh/static/css/main.9ab8ff0d.css.map",
-    "main.cfa11405.js.map": "/diego-fresh/static/js/main.cfa11405.js.map",
+    "main.ed45734b.js.map": "/diego-fresh/static/js/main.ed45734b.js.map",
     "787.951b8dbb.chunk.js.map": "/diego-fresh/static/js/787.951b8dbb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ab8ff0d.css",
-    "static/js/main.cfa11405.js"
+    "static/js/main.ed45734b.js"
   ]
 }
