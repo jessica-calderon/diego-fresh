@@ -24,7 +24,7 @@ const App: React.FC = () => {
                         <div className='flex items-center justify-between h-16'>
                             <div className='flex items-center'>
                                 <div className='flex-shrink-0'>
-                                    <Link to='/' className='hover:text-gray-500'>
+                                    <Link to='/home' className='hover:text-gray-500'>
                                         <svg
                                             className='h-8 w-8 text-white'
                                             viewBox='0 0 24 24'
@@ -42,19 +42,19 @@ const App: React.FC = () => {
                                 <div className='hidden md:block'>
                                     <div className='ml-10 flex items-baseline space-x-4'>
                                         <Link
-                                            to={`${process.env.PUBLIC_URL}/home`}
+                                            to='/home'
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Home
                                         </Link>
                                         <Link
-                                            to={`${process.env.PUBLIC_URL}/gallery`}
+                                            to='/gallery'
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Gallery
                                         </Link>
                                         <Link
-                                            to={`${process.env.PUBLIC_URL}/contact`}
+                                            to='/contact'
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Contact
@@ -72,25 +72,25 @@ const App: React.FC = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className={`md:hidden  ${isMenuOpen ? "block" : "hidden"}`}>
+                        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
                             <div className='px-2 pt-2 pb-3 space-y-1'>
                                 <Link
                                     onClick={closeMenu}
-                                    to={`${process.env.PUBLIC_URL}/home`}
+                                    to='/home'
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 border-b text-base border-[#1d1c21] font-medium'
                                 >
                                     Home
                                 </Link>
                                 <Link
                                     onClick={closeMenu}
-                                    to={`${process.env.PUBLIC_URL}/gallery`}
+                                    to='/gallery'
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 border-b text-base border-[#1d1c21] font-medium'
                                 >
                                     Gallery
                                 </Link>
                                 <Link
                                     onClick={closeMenu}
-                                    to={`${process.env.PUBLIC_URL}/contact`}
+                                    to='/contact'
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 text-base font-medium'
                                 >
                                     Contact
@@ -100,7 +100,7 @@ const App: React.FC = () => {
                     </div>
                 </nav>
                 <Routes>
-                    <Route path='/' element={<Navigate to='/home' />} />
+                    <Route path='/' element={<Navigate to='/home' replace />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/gallery' element={<Gallery />} />
                     <Route path='/contact' element={<Contact />} />
