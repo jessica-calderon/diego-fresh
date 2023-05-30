@@ -16,7 +16,7 @@ const App: React.FC = () => {
     };
 
     return (
-        <Router>
+      <Router basename="/diego-fresh">
             <div className='min-h-screen bg-[#0f0d0e]'>
                 <nav className='bg-[#0f0d0e]'>
                     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
