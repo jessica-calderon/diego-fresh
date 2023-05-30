@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
+import { Navigate } from "react-router-dom";
 
 const App: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const App: React.FC = () => {
     };
 
     return (
-      <Router basename="/diego-fresh">
+        <Router basename='/diego-fresh'>
             <div className='min-h-screen bg-[#0f0d0e]'>
                 <nav className='bg-[#0f0d0e]'>
                     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -41,19 +42,19 @@ const App: React.FC = () => {
                                 <div className='hidden md:block'>
                                     <div className='ml-10 flex items-baseline space-x-4'>
                                         <Link
-                                            to='/'
+                                            to={`${process.env.PUBLIC_URL}/home`}
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Home
                                         </Link>
                                         <Link
-                                            to='/gallery'
+                                            to={`${process.env.PUBLIC_URL}/gallery`}
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Gallery
                                         </Link>
                                         <Link
-                                            to='/contact'
+                                            to={`${process.env.PUBLIC_URL}/contact`}
                                             className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                                         >
                                             Contact
@@ -75,21 +76,21 @@ const App: React.FC = () => {
                             <div className='px-2 pt-2 pb-3 space-y-1'>
                                 <Link
                                     onClick={closeMenu}
-                                    to='/'
+                                    to={`${process.env.PUBLIC_URL}/home`}
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 border-b text-base border-[#1d1c21] font-medium'
                                 >
                                     Home
                                 </Link>
                                 <Link
                                     onClick={closeMenu}
-                                    to='/gallery'
+                                    to={`${process.env.PUBLIC_URL}/gallery`}
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 border-b text-base border-[#1d1c21] font-medium'
                                 >
                                     Gallery
                                 </Link>
                                 <Link
                                     onClick={closeMenu}
-                                    to='/contact'
+                                    to={`${process.env.PUBLIC_URL}/contact`}
                                     className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 text-base font-medium'
                                 >
                                     Contact
@@ -99,7 +100,8 @@ const App: React.FC = () => {
                     </div>
                 </nav>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Navigate to='/home' />} />
+                    <Route path='/home' element={<Home />} />
                     <Route path='/gallery' element={<Gallery />} />
                     <Route path='/contact' element={<Contact />} />
                 </Routes>
