@@ -13,7 +13,7 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#1d1c21]  py-16">
+    <div className="bg-[#0f0d0e]  py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl text-center font-bold text-white mb-8">Gallery</h1>
         <div className="carousel-container">

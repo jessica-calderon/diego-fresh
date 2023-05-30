@@ -11,11 +11,11 @@ const Home = () => {
                 }}
             >
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-                    <h1 className='text-5xl font-bold text-white mb-8'>Welcome to our Tattoo Shop</h1>
+                    <h1 className='text-5xl font-bold text-white mb-8'>Diego Fresh Tattoos</h1>
                     <p className='text-xl text-white'>Book your appointment today.</p>
                 </div>
             </header>
-            <section className='bg-[#1d1c21] py-16'>
+            <section className='bg-[#0f0d0e] py-16'>
                 <div className='md:w-4/12 sm:w-{50%0 mx-auto px-4 sm:px-6 lg:px-8'>
                     <h2 className='text-3xl text-center font-bold text-white mb-8'>About the Artist</h2>
                     <div className='flex justify-center'>
